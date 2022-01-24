@@ -7,7 +7,7 @@ import ctypes
 import time
 from PIL import Image, ImageGrab
 
-__version__ = "1.0.2"
+__version__ = "1.0.3"
 
 _callback_text = None
 _callback_image = None
@@ -19,7 +19,7 @@ _clipboard_thread = None
 
 def _get_clipboard_content():
     
-    time.sleep(0.2)
+    time.sleep(0.5)
 
     clipboard_type = None
     clipboard_content = None

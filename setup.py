@@ -11,7 +11,7 @@ README = (HERE / "README.md").read_text()
 # This call to setup() does all the work
 setup(
     name="clipboard_monitor",
-    version="1.0.2",
+    version="1.0.3",
     description="Monitor Clipboard changes and trigger related actions",
     long_description=README,
     long_description_content_type="text/markdown",
