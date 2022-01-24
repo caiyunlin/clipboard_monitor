@@ -30,3 +30,8 @@ setup(
     entry_points={
     },
 )
+
+# pip install wheel
+# pip install twine
+# python .\setup.py sdist bdist_wheel
+# python -m twine upload dist/*
