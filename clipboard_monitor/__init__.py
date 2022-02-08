@@ -6,7 +6,7 @@ import threading
 import ctypes
 import time
 
-__version__ = "1.0.4"
+__version__ = "1.0.5"
 
 _callback_text = None
 _callback_image = None
@@ -18,6 +18,7 @@ _clipboard_thread = None
 
 def _get_clipboard_content():
     
+    # sleep 0.5 to avoid clipboard not ready for read
     time.sleep(0.5)
 
     clipboard_type = None
@@ -57,7 +58,7 @@ def _process_message(hwnd: int, msg: int, wparam: int, lparam: int):
             _callback_text(clip[1])
 
         if clip[0] == 'image' and _callback_update:
-            _callback_image(clip[1])
+            _callback_image()
 
         if clip[0] == 'files' and _callback_files:
             _callback_files(clip[1])    

@@ -16,7 +16,7 @@ def print_files(files):
 	print("got files")
 	print(files)
 
-def print_image(image):
+def print_image():
 	print("got image")
 	image = ImageGrab.grabclipboard()
 	image.save("./test.png")
