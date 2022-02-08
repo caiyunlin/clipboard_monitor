@@ -1,10 +1,3 @@
-# clipboard_monitor
-
-Clipboard Monitor will monitor the clipboard changes and trigger register events.
-It's very easy to use, for details please refer below commands
-
-## Usages
-```python
 import clipboard_monitor 
 from PIL import Image, ImageGrab
 
@@ -16,7 +9,7 @@ def print_files(files):
 	print("got files")
 	print(files)
 
-def print_image(image):
+def print_image():
 	print("got image")
 	image = ImageGrab.grabclipboard()
 	image.save("./test.png")
@@ -27,4 +20,3 @@ clipboard_monitor.on_files(print_files)
 clipboard_monitor.on_image(print_image)
 
 clipboard_monitor.wait()
-```

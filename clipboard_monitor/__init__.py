@@ -5,9 +5,8 @@ import win32clipboard
 import threading
 import ctypes
 import time
-from PIL import Image, ImageGrab
 
-__version__ = "1.0.3"
+__version__ = "1.0.4"
 
 _callback_text = None
 _callback_image = None
@@ -26,7 +25,6 @@ def _get_clipboard_content():
 
     if win32clipboard.IsClipboardFormatAvailable(win32con.CF_BITMAP) :
         clipboard_type = 'image'
-        clipboard_content = ImageGrab.grabclipboard()
     else : 
         win32clipboard.OpenClipboard()
         if win32clipboard.IsClipboardFormatAvailable(win32con.CF_UNICODETEXT) :
